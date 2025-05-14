@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="default">
+    <!-- Light -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Ground -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- AprilTag Marker (as a box with tag texture) -->
+    <model name="apriltag_marker">
+      <static>true</static>
+      <link name="link">
+        <pose>1 0 0.5 0 0 0</pose>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 0.2 0.01</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts</uri>
+              <uri>file://media/materials/textures</uri>
+              <name>ApriltagTexture</name> <!-- You can replace this with actual image later -->
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Camera Bot -->
+    <include>
+      <uri>file://$(pwd)/robot_project/models/camera_bot</uri>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+  </world>
+</sdf>
