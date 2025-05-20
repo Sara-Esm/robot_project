@@ -15,13 +15,14 @@ This project simulates a mobile robot equipped with a camera that detects AprilT
 
 ## 🗂️ Project Structure
 
-
 robot_project/
-├── launch/ # ROS 2 launch files
-├── models/ # Gazebo models (AprilTag + Camera bot)
-├── worlds/ # Custom world with AprilTag
-├── config/ # Camera calibration config (optional)
-└── README.md # Project documentation
+├── config/                # Camera calibration (optional)
+├── launch/                # ROS 2 launch files
+├── models/
+│   ├── camera_bot/        # Robot model with camera
+│   └── apriltag_marker/   # AprilTag marker model and textures
+├── worlds/                # Custom Gazebo world
+└── README.md              # Project overview and instructions
 
 
 ---
