@@ -1,12 +1,23 @@
 from launch import LaunchDescription
 from launch_ros.actions import Node
 from launch.actions import ExecuteProcess
+import os
 
 def generate_launch_description():
+    # Dynamically get the absolute path to the world file
+    world_path = os.path.abspath(
+        os.path.join(
+            os.path.dirname(__file__),
+            '..',
+            'worlds',
+            'apriltag_world.world'
+        )
+    )
+
     return LaunchDescription([
-        # Start Gazebo with the custom world
+        # Start Gazebo with the absolute path to the custom world
         ExecuteProcess(
-            cmd=['gazebo', '--verbose', 'robot_project/worlds/apriltag_world.world'],
+            cmd=['gazebo', '--verbose', world_path],
             output='screen'
         ),
 
@@ -19,3 +30,4 @@ def generate_launch_description():
             parameters=[{'publish_tf': True}]
         )
     ])
+

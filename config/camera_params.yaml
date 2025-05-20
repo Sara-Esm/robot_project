@@ -1,0 +1,8 @@
+camera:
+  ros__parameters:
+    camera_frame: "camera_link"
+    image_transport: "raw"
+    family: "36h11"
+    size: 0.18  # tag size in meters
+    max_hamming: 0
+    z_up: true
