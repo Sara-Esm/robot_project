@@ -1,20 +1,20 @@
-# 🤖 Robot Project: AprilTag Simulation with Camera Bot
+# 🤖 AprilTag Simulation with Camera Bot
 
-This project simulates a robot with a camera that detects AprilTags in a Gazebo environment using ROS 2 (Humble).  
-It's perfect for learning ROS 2 simulation, AprilTag detection, and working with custom Gazebo models.
+This project simulates a mobile robot equipped with a camera that detects AprilTags in a Gazebo environment using **ROS 2 Humble**. It is designed for learning and demonstrating core robotics concepts like simulation, perception, and tag-based localization.
 
 ---
 
 ## 🚀 Features
 
-- 🧭 Gazebo simulation with a custom AprilTag marker  
-- 📸 Robot equipped with a camera sensor  
-- 🏷️ Real-time tag detection using `apriltag_ros`  
-- 🖼️ Live image stream and detection via ROS 2 topics  
+- 🧭 Gazebo simulation with a custom AprilTag marker
+- 📸 Mobile robot with a simulated camera sensor
+- 🏷️ Real-time AprilTag detection using `apriltag_ros`
+- 🖼️ Live camera feed and detection data via ROS 2 topics
 
 ---
 
 ## 🗂️ Project Structure
+
 
 robot_project/
 ├── launch/ # ROS 2 launch files
@@ -28,28 +28,9 @@ robot_project/
 
 ## 🛠️ Requirements
 
-- ROS 2 Humble
-- Gazebo 11
-- `apriltag_ros` package
+- [ROS 2 Humble](https://docs.ros.org/en/humble/index.html)
+- [Gazebo 11](http://gazebosim.org/)
+- [`apriltag_ros`](https://github.com/AprilRobotics/apriltag_ros)
 
 ---
-
-## 🚀 How to Run
-
-1. Launch the simulation:
-
-   ```bash
-   source ~/.bashrc
-   source /opt/ros/humble/setup.bash
-   ros2 launch launch/sim_apriltag_world.launch.py
-
-2. View detections (AprilTag overlays):
-ros2 topic echo /detections
-
-View the camera feed:
-3. ros2 run rqt_image_view rqt_image_view
-
-
-📎 License
-MIT — feel free to use, modify, and share.
 
